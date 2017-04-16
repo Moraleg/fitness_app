@@ -5,14 +5,17 @@ var port = 3000;
 
 //=====================MIDDLEWARE======================
 app.use(express.static('public'));
+
 //================CONTROLLERS CONNECTED================
+var userController = require('./controllers/users.js');
+app.use('/users', userController);
+
 
 //=====================GET ROUTE======================
 app.get('/', function(req, res){
   // res.send('main page route working');
   res.render('index.ejs');
 });
-
 
 
 
