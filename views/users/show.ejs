@@ -18,19 +18,7 @@
       <hr>
       <div class="show-div">
   				<h6>Workouts by <%=user.username%></h6>
-  				<ul class="user-show-ul">
-  					<% for(var i = 0; i < user.workouts.length; i++){ %>
-  						<li class="user-show-li">
-  								<img src="<%=user.workouts[i].img%>">
-
-  						</li>
-              <li>
-  							<a href="/workouts/<%=user.workouts[i]._id%>">
-  							<p><%=user.workouts[i].description%></p>
-  							</a>
-  						</li>
-  						<%}%>
-  				</ul>
+  				
   			</div>
       <div>
         <form class="button-form" action="/users/<%=user._id%>?_method=DELETE" method="POST">

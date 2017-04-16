@@ -19,13 +19,13 @@ router.get('/new', function(req, res){
 });
 
 //User Show Route
-// router.get('/:id', function(req, res){
-//   User.findById(req.params.id, function(err, foundUsers){
-//     res.render('users/show.ejs', {
-//       user: foundUsers
-//     });
-//   });
-// });
+router.get('/:id', function(req, res){
+  User.findById(req.params.id, function(err, foundUsers){
+    res.render('users/show.ejs', {
+      user: foundUsers
+    });
+  });
+});
 
 
 //=====================PUT ROUTE======================
