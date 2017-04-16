@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fitness App</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>User Index Page</h1>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/user">User Main</a>
+          <a href="/workout">Workouts</a>
+        </nav>
+      </header>
+      <hr>
+      <div class="show-div">
+  				<h6>Workouts by <%=user.username%></h6>
+  				<ul class="user-show-ul">
+  					<% for(var i = 0; i < user.workouts.length; i++){ %>
+  						<li class="user-show-li">
+  								<img src="<%=user.workouts[i].img%>">
+
+  						</li>
+              <li>
+  							<a href="/workouts/<%=user.workouts[i]._id%>">
+  							<p><%=user.workouts[i].description%></p>
+  							</a>
+  						</li>
+  						<%}%>
+  				</ul>
+  			</div>
+      <div>
+        <form class="button-form" action="/users/<%=user._id%>?_method=DELETE" method="POST">
+          <input class="button" type="submit" value="Delete User">
+        </form><br>
+        <a class="button" href="/users/<%=user._id%>/edit">Edit User</a>
+      </div>
+    </main>
+  </body>
+</html>

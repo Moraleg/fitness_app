@@ -11,19 +11,19 @@
         <h1>User Index Page</h1>
         <nav class="nav">
           <a href="/">Home</a>
+          <a href="/user/new">New User</a>
           <a href="/workout">Workouts</a>
-          <a href="/users/new">New User</a><!--already as sign up-->
         </nav>
       </header>
-      <div class="user-index">
-      <h1 class="h2-users">Users</h1>
-      <ul class="user-ul">
-        <% for(var i = 0; i < user.length; i++){ %>
-          <li class="user-li">
-            <a href="/users/<%=user[i]._id%>"><%=user[i].username%></a>
-          </li>
-        <% } %>
-      </ul>
     </div>
+      <h1 class="h2-users new-users">New User</h1>
+  <div>
+    <form class="new-input" action="/users" method="POST">
+      Username: <input class="new-input" type="text" name="username"/><br/>
+      <label for="password">Password</label>
+      <input class="new-input" type="password" name="password" pattern=".{6,}" id="password"/><br>
+      <input class="button" type="submit" value="Register User">
+    </form>
+  </div>
   </body>
 </html>
