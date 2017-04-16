@@ -27,13 +27,27 @@ router.get('/:id', function(req, res){
   });
 });
 
+//User Edit Route
+router.get('/:id/edit', function(req, res){
+  User.findById(req.params.id, function(err, foundUsers){
+    res.render('users/edit.ejs', {
+      user: foundUsers
+    });
+  });
+});
 
 //=====================PUT ROUTE======================
+router.put('/:id', function(req, res){
+  User.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, updatedUser){
+    res.redirect('/users');
+  });
+});
+
 
 //=====================POST ROUTE======================
 router.post('/', function(req, res){
   User.create(req.body, function(err, createdUser){
-    res.redirect('users');
+    res.redirect('/users');
   });
 });
 

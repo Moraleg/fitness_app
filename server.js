@@ -23,8 +23,6 @@ app.get('/', function(req, res){
 });
 
 
-
-
 //=====================DATABASE CONNECTED=====================
 mongoose.connect('mongodb://localhost:27017/fitness');
 mongoose.connection.once('open', function(){
