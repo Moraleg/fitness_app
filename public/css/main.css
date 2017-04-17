@@ -75,17 +75,18 @@ nav a:hover:before {
 .sign-up{
   position: absolute;
   bottom: 34%;
-  right: 47%;
+  right: 46%;
+  text-align: center;
 }
 
 .sign-up a{
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   background-color: #f65c5b;
-  border-radius: 14px;
+  border-radius: 20px;
   box-shadow: inset 2px 2px 2px #ceb8c3;
-  padding: 8px 22px 8px 22px;
+  padding: 7px 20px 7px 20px;
   color: white;
 
 }

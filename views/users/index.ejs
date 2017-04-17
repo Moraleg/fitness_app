@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Fitness App</title>
+    <link rel="stylesheet" href="/css/user_index.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container clearfix">
       <header class="header">
         <h1>User Index Page</h1>
         <nav class="nav">
@@ -14,16 +15,15 @@
           <a href="/workouts">Workouts</a>
           <a href="/users/new">New User</a><!--already as sign up-->
         </nav>
-      </header>
-      <div class="user-index">
-      <h1 class="h2-users">Users</h1>
-      <ul class="user-ul">
+      </header><br>
+    </div>
+    <div class="user-index">
+      <h2 class="h2-users">Users</h2>
         <% for(var i = 0; i < user.length; i++){ %>
-          <li class="user-li">
-            <a href="/users/<%=user[i]._id%>"><%=user[i].username%></a>
-          </li>
+        <div class="users">
+          <a href="/users/<%=user[i]._id%>"><%=user[i].username%></a>
+          </div>
         <% } %>
-      </ul>
     </div>
   </body>
 </html>

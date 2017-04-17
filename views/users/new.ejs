@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Fitness App</title>
+    <link rel="stylesheet" href="/css/user_new.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container clearfix">
       <header class="header">
-        <h1>User Index Page</h1>
+        <h1>User New Page</h1>
         <nav class="nav">
           <a href="/">Home</a>
           <a href="/users">User Main</a>
@@ -16,13 +17,12 @@
         </nav>
       </header>
     </div>
-      <h1 class="h2-users new-users">New User</h1>
-  <div>
+  <div class="sign-up-container">
     <form class="new-input" action="/users" method="POST">
-      Username: <input class="new-input" type="text" name="username"/><br/>
-      <label for="password">Password</label>
-      <input class="new-input" type="password" name="password" pattern=".{6,}" id="password"/><br>
-      <input class="button" type="submit" value="Register User">
+      <input class="new-input" type="text" name="username" placeholder="username"/><br/>
+      <!-- <label for="password"></label> -->
+      <input class="new-input" type="password" name="password" pattern=".{6,}" id="password" placeholder="password"/><br>
+      <input class="button" type="submit" value="Sign Up!">
     </form>
   </div>
   </body>

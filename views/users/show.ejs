@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Fitness App</title>
+    <link rel="stylesheet" href="/css/user_index.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container clearfix">
       <header class="header">
-        <h1>User Index Page</h1>
+        <h1>User Show Page</h1>
         <nav class="nav">
           <a href="/">Home</a>
           <a href="/users">User Main</a>
           <a href="/workouts">Workouts</a>
         </nav>
       </header>
-      <hr>
+    </div>
       <div class="show-div">
   				<h6>Workouts by <%=user.username%></h6>
-
-  			</div>
+  		</div>
       <div>
         <form class="button-form" action="/users/<%=user._id%>?_method=DELETE" method="POST">
           <input class="button" type="submit" value="Delete User">
