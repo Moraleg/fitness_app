@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
+var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/fitness';
 
 //=====================MIDDLEWARE======================
 app.use(express.static('public'));
@@ -24,7 +25,7 @@ app.get('/', function(req, res){
 
 
 //=====================DATABASE CONNECTED=====================
-mongoose.connect('mongodb://localhost:27017/fitness');
+mongoose.connect(mongoDBURI);
 mongoose.connection.once('open', function(){
   console.log('mongoose is connected');
 });
@@ -32,5 +33,5 @@ mongoose.connection.once('open', function(){
 
 //=====================SERVER CONNECTED======================
 app.listen(port, function(){
-  console.log('listening on port:', port);
+  console.log('listening on port:' + port);
 });

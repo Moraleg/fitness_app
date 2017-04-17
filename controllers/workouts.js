@@ -17,15 +17,22 @@ router.get('/', function(req, res){
 
 //Workouts New Route
 router.get('/new', function(req, res){
-  res.render('workouts/new.ejs');
+  User.find({}, function(err, findUsers){
+    res.render('workouts/new.ejs', {
+      user: findUsers
+    });
+  });
 });
 
 
 //Workouts Show Route
 router.get('/:id', function(req, res){
   Workouts.findById(req.params.id, function(err, foundWorkouts){
-    res.render('workouts/show.ejs', {
-      workout: foundWorkouts,
+    User.findOne({'workout._id': req.params.id}, function(err, foundUsers){
+      res.render('workouts/show.ejs', {
+        workout: foundWorkouts,
+        user: foundUsers
+      });
     });
   });
 });
@@ -48,9 +55,14 @@ router.put('/:id', function(req, res){
 
 // //=====================POST ROUTE======================
 router.post('/', function(req, res){
-  Workouts.create(req.body, function(err, createdWorkouts){
-    console.log(req.body);
-    res.redirect('/workouts');
+  User.findById(req.body.username, function(err, foundUsers){
+    Workouts.create(req.body, function(err, createdWorkouts){
+      console.log(req.body);
+      foundUsers.workouts.push(createdWorkouts);
+      foundUsers.save(function(err, data){
+        res.redirect('/workouts');
+      });
+    });
   });
 });
 
