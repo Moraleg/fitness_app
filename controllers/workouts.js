@@ -14,7 +14,10 @@ router.get('/', function(req, res){
   });
 });
 
-
+//User New Route
+router.get('/new', function(req, res){
+  res.render('workouts/new.ejs');
+});
 
 
 
