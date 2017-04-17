@@ -54,6 +54,12 @@ router.post('/', function(req, res){
   });
 });
 
+//=====================DELETE ROUTE======================
+router.delete('/:id', function(req, res){
+  Workouts.findByIdAndRemove(req.params.id, function(err, response){
+    res.redirect('/workouts');
+  });
+});
 
 
 
