@@ -14,8 +14,8 @@ app.use(methodOverride('_method'));
 var userController = require('./controllers/users.js');
 app.use('/users', userController);
 
-// var workoutsController = require('./controllers/workouts.js');
-// app.use('/workouts', workoutsController);
+var workoutsController = require('./controllers/workouts.js');
+app.use('/workouts', workoutsController);
 //=====================GET ROUTE======================
 app.get('/', function(req, res){
   // res.send('main page route working');
