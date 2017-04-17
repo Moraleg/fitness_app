@@ -30,6 +30,22 @@ router.get('/:id', function(req, res){
   });
 });
 
+//Workouts Edit Route
+router.get('/:id/edit', function(req, res){
+  Workouts.findById(req.params.id, function(err, foundWorkouts){
+    res.render('workouts/edit.ejs', {
+      workout: foundWorkouts
+    });
+  });
+});
+
+// //=====================PUT ROUTE======================
+router.put('/:id', function(req, res){
+  Workouts.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, updatedWorkouts){
+    res.redirect('/workouts');
+  });
+});
+
 // //=====================POST ROUTE======================
 router.post('/', function(req, res){
   Workouts.create(req.body, function(err, createdWorkouts){
