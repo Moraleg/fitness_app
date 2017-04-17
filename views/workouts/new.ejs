@@ -5,6 +5,22 @@
     <title></title>
   </head>
   <body>
-    <h1>New Workouts Page</h1>
+    <div class="container clearfix">
+      <header class="header">
+        <h1>New Workouts Page</h1>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/workouts">Workouts Main</a>
+        </nav>
+      </header>
+    </div>
+    <h1 class="h2-users new-users">New Workouts Post</h1>
+    <div>
+      <form class="new-input" action="/workouts" method="POST">
+        Title: <input class="new-input" type="text" name="title" /><br>
+        Description: <textarea class="new-input" name="description"></textarea><br/>
+        <input class="button" type="submit" value="Create Post">
+      </form>
+    </div>
   </body>
 </html>

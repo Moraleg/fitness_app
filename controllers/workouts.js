@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Workouts = require('../models/workouts.js');
+var User = require('../models/users.js');
 
 //=====================GET ROUTES======================
 
@@ -14,13 +15,28 @@ router.get('/', function(req, res){
   });
 });
 
-//User New Route
+//Workouts New Route
 router.get('/new', function(req, res){
   res.render('workouts/new.ejs');
 });
 
 
+//Workouts Show Route
+router.get('/:id', function(req, res){
+  Workouts.findById(req.params.id, function(err, foundWorkouts){
+    res.render('workouts/show.ejs', {
+      workout: foundWorkouts,
+    });
+  });
+});
 
+// //=====================POST ROUTE======================
+router.post('/', function(req, res){
+  Workouts.create(req.body, function(err, createdWorkouts){
+    console.log(req.body);
+    res.redirect('/workouts');
+  });
+});
 
 
 
