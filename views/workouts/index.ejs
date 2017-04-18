@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Fitness App</title>
-    <link rel="stylesheet" href="/css/user_index.css">
+    <link rel="stylesheet" href="/css/user_show.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
@@ -12,13 +12,12 @@
         <h1>Workouts Index Page</h1>
         <nav class="nav">
           <a href="/">Home</a>
-          <a href="/workouts/new">New Workouts</a>
         </nav>
       </header><br>
     </div>
   </div>
   <div class="user-index">
-    <h2 class="h2-users">Workouts</h2>
+    <h2 class="h2-users">Workout Feed</h2>
       <% for(var i = 0; i < workout.length; i++){ %>
       <div class="users">
         <a href="/workouts/<%=workout[i]._id%>"><%=workout[i].title%></a>

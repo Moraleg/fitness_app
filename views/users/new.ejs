@@ -12,17 +12,16 @@
         <h1>User New Page</h1>
         <nav class="nav">
           <a href="/">Home</a>
-          <a href="/users">User Main</a>
           <a href="/workouts">Workouts</a>
         </nav>
       </header>
     </div>
   <div class="sign-up-container">
     <form class="new-input" action="/users" method="POST">
-      <input class="new-input" type="text" name="userImg" placeholder="profile picture"/><br/>
       <input class="new-input" type="text" name="username" placeholder="username"/><br/>
       <!-- <label for="password"></label> -->
       <input class="new-input" type="password" name="password" pattern=".{6,}" id="password" placeholder="password"/><br>
+      <input class="new-input" type="text" name="userImg" placeholder="profile picture"/><br/>
       <input class="button" type="submit" value="Sign Up!">
     </form>
   </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Fitness App</title>
-    <link rel="stylesheet" href="/css/user_new.css">
+    <link rel="stylesheet" href="/css/user_edit.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
@@ -12,19 +12,18 @@
         <h1>User Edit Page</h1>
         <nav class="nav">
           <a href="/">Home</a>
-          <a href="/users">User Main</a>
+          <a href="/users/<%=user._id%>">User Main</a>
           <a href="/workouts">Workouts</a>
         </nav>
       </header>
     </div>
-      <h1 class="h2-users new-users">Edit <%=user.username%></h1>
     <div class="sign-up-container">
+      <h3>Edit <%=user.username%></h3>
       <form class="new-input" action="/users/<%=user._id%>?_method=PUT" method="POST">
-      Username: <input class="new-input" type="text" name="username" value="<%=user.username%>"><br>
-      <label for="password">Password</label>
+      <input class="new-input" type="text" name="username" value="<%=user.username%>"><br>
+      <!-- <label for="password">Password</label> -->
       <input class="new-input" type="password" name="password" pattern=".{6,}" id="password"  value="<%=user.password%>"/><br>
-      <input class="button" type="submit" value="Update User">
-        </form>
+      <input class="button" type="submit" value="Update User"><br>
       </div>
   </body>
 </html>

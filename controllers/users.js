@@ -6,13 +6,13 @@ var bcrypt = require('bcrypt');
 //=====================GET ROUTES======================
 
 //User Index Route
-router.get('/', function(req, res){
-  User.find({}, function(err, foundUsers){
-    res.render('users/index.ejs', {
-      user:foundUsers
-    });
-  });
-});
+// router.get('/', function(req, res){
+//   User.find({}, function(err, foundUsers){
+//     res.render('users/index.ejs', {
+//       user:foundUsers
+//     });
+//   });
+// });
 
 //User New Route
 router.get('/new', function(req, res){
@@ -63,7 +63,7 @@ router.post('/', function(req, res){
 //=====================DELETE ROUTE======================
 router.delete('/:id', function(req, res){
   User.findByIdAndRemove(req.params.id, function(err, response){
-    res.redirect('/users');
+    res.redirect('/');
   });
 });
 
