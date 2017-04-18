@@ -19,13 +19,14 @@
       <form class="new-input" action="/workouts" method="POST">
         <select name="username">
           <% for(var i = 0; i < user.length; i++){ %>
-            <option value="<%=user[i]._id%>">Choose User:</option>
+            <option>Choose User:</option>
             <option value="<%=user[i]._id%>"><%=user[i].username%></option>
           <%}%>
         </select><br>
-        <!-- Username: <input class="new-input" type="text" name="username" /><br> -->
-        Title: <input class="new-input" type="text" name="title" /><br>
-        Description: <textarea class="new-input" name="description"></textarea><br/>
+        <input class="new-input" type="text" name="title" placeholder="Title" /><br>
+        <input class="new-input" type="text" name="day" placeholder="Day of The Week" /><br>
+        <input class="new-input" type="text" name="duration" placeholder="Duration" /><br>
+        <textarea class="new-input" name="description" placeholder="RDLs | 10 reps"></textarea><br/>
         <input class="button" type="submit" value="Create Post">
       </form>
     </div>

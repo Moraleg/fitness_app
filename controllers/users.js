@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/users.js');
+var bcrypt = require('bcrypt');
 
 //=====================GET ROUTES======================
 
@@ -36,6 +37,13 @@ router.get('/:id/edit', function(req, res){
   });
 });
 
+router.get('/new/profile', function(req, res){
+  res.render('users/show.ejs', {
+    user: req.session.currentuser
+  });
+});
+
+
 //=====================PUT ROUTE======================
 router.put('/:id', function(req, res){
   User.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, updatedUser){
@@ -46,8 +54,9 @@ router.put('/:id', function(req, res){
 
 //=====================POST ROUTE======================
 router.post('/', function(req, res){
+  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
   User.create(req.body, function(err, createdUser){
-    res.redirect('/users');
+    res.redirect('/');
   });
 });
 

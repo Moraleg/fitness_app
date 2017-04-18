@@ -21,6 +21,7 @@
       <h2 class="h2-users">Users</h2>
         <% for(var i = 0; i < user.length; i++){ %>
         <div class="users">
+          <a href="/users/<%=user[i]._id%>"><img src="<%=user[i].userImg%>"/></a><br>
           <a href="/users/<%=user[i]._id%>"><%=user[i].username%></a>
           </div>
         <% } %>

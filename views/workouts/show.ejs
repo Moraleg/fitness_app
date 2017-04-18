@@ -21,9 +21,11 @@
     </div>
     <div>
       <div>
-        <h3 class="description">___ Workout:</h3>
         <%=workout.title%><br>
+        <%=workout.day%><br>
+        <%=workout.duration%><br>
         <%=workout.description%>
+        <h6> Workouts by: <a href="/users/<%=user._id%>"><%=user.username%></a></h6>
       </div>
       <div>
         <form class="button-form" action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">

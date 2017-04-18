@@ -24,11 +24,11 @@ router.get('/new', function(req, res){
   });
 });
 
-
 //Workouts Show Route
 router.get('/:id', function(req, res){
   Workouts.findById(req.params.id, function(err, foundWorkouts){
-    User.findOne({'workout._id': req.params.id}, function(err, foundUsers){
+    User.findOne({'workouts._id': req.params.id}, function(err, foundUsers){
+      // console.log(foundUsers);
       res.render('workouts/show.ejs', {
         workout: foundWorkouts,
         user: foundUsers
@@ -36,6 +36,7 @@ router.get('/:id', function(req, res){
     });
   });
 });
+
 
 //Workouts Edit Route
 router.get('/:id/edit', function(req, res){
