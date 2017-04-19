@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/workout_new.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
     <div class="container clearfix">
@@ -23,8 +25,8 @@
             <option value="<%=user[i]._id%>"><%=user[i].username%></option>
           <%}%>
         </select><br>
-        <input class="new-input" type="text" name="title" placeholder="Title" /><br>
         <input class="new-input" type="text" name="day" placeholder="Day of The Week" /><br>
+        <input class="new-input" type="text" name="title" placeholder="Title" /><br>
         <input class="new-input" type="text" name="duration" placeholder="Duration" /><br>
         <textarea class="new-input" name="description" placeholder="RDLs | 10 reps"></textarea><br/>
         <input class="button" type="submit" value="Create Post">

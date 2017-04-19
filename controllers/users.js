@@ -23,7 +23,8 @@ router.get('/new', function(req, res){
 router.get('/:id', function(req, res){
   User.findById(req.params.id, function(err, foundUsers){
     res.render('users/show.ejs', {
-      user: foundUsers
+      user: foundUsers,
+      currentuser: req.session.currentuser
     });
   });
 });
@@ -37,17 +38,18 @@ router.get('/:id/edit', function(req, res){
   });
 });
 
-router.get('/new/profile', function(req, res){
-  res.render('users/show.ejs', {
-    user: req.session.currentuser
-  });
-});
+// router.get('/new/profile', function(req, res){
+//   res.render('users/show.ejs', {
+//     user: req.session.currentuser
+//   });
+// });
 
 
 //=====================PUT ROUTE======================
 router.put('/:id', function(req, res){
+  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
   User.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, updatedUser){
-    res.redirect('/users');
+    res.redirect('/');
   });
 });
 

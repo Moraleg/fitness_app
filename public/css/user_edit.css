@@ -2,7 +2,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Handlee', cursive;
-  background-color: #ceb8c3;
+  /*background-color: #ceb8c3;*/
+  background-image: url('/images/patterns.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -31,7 +32,7 @@ h1 {
 .nav a {
   text-decoration: none;
   color: #393338;
-  font-size: 22px;
+  font-size: 18px;
   margin-right: 30px;
   position: relative;
 }
@@ -65,10 +66,11 @@ nav a:hover:before {
   width: 25%;
   text-align: center;
   display: block;
-  margin: 190px auto;
+  margin: 150px auto;
   padding: 20px;
   background-color: #393338;
   box-shadow: 0px 1px 1px #393338;
+  border-radius: 10px;
 }
 
 .sign-up-container h3 {

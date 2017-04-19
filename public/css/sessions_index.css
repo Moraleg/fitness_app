@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Handlee', cursive;
+  background-image: url('/images/pink_rice.png');
   /*background: linear-gradient(rgba(57, 51, 56,.2), rgba(57, 51, 56,.2)), url("/images/fitness-new.jpg");*/
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,7 +70,7 @@ nav a:hover:before {
   width: 25%;
   text-align: center;
   display: block;
-  margin: 190px auto;
+  margin: 150px auto;
   padding: 20px;
   background-color: #393338;
   box-shadow: 0px 1px 1px #393338;
