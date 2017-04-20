@@ -29,10 +29,11 @@ router.get('/new', function(req, res){
 router.get('/:id', function(req, res){
   Workouts.findById(req.params.id, function(err, foundWorkouts){
     User.findOne({'workouts._id': req.params.id}, function(err, foundUsers){
-      // console.log(foundUsers);
+      console.log({'workouts._id': req.params.id});
       res.render('workouts/show.ejs', {
         workout: foundWorkouts,
-        user: foundUsers
+        user: foundUsers,
+        currentuser: req.session.currentuser
       });
     });
   });
@@ -59,7 +60,7 @@ router.put('/:id', function(req, res){
 router.post('/', function(req, res){
   User.findById(req.body.username, function(err, foundUsers){
     Workouts.create(req.body, function(err, createdWorkouts){
-      console.log(req.body);
+      console.log(req.body.username);
       foundUsers.workouts.push(createdWorkouts);
       foundUsers.save(function(err, data){
         res.redirect('/workouts');

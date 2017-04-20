@@ -11,9 +11,13 @@
       <header class="header">
         <h1>User Show Page</h1>
         <nav class="nav">
+        <% if(currentuser === undefined){ %>
+        <a href="/">Home</a>
+        <% } else { %>
           <a href="/">Home</a>
           <a href="/workouts/new">New Workouts</a>
           <a href="/users/<%=user._id%>/edit">Edit User</a>
+        <% } %>
         </nav>
       </header>
     </div>
@@ -25,7 +29,7 @@
           <div class="users">
   					<% for(var i = 0; i < user.workouts.length; i++){ %>
   						<div class="workout-post">
-                <p><%=user.workouts[i].day%>:</p>
+                <p><%=user.workouts[i].image%></p>
   							<a href="/workouts/<%=user.workouts[i]._id%>"><%=user.workouts[i].title%></a>
   						</div>
   						<%}%>

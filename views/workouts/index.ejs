@@ -22,11 +22,12 @@
       </header><br>
     </div>
     <% if(currentuser === undefined){ %>
-    <h3>Welcome</h3>
+    <h3 class="welcome">Welcome</h3>
     <% } else { %>
-      <h3>Welcome, <%=currentuser.username%>!</h3>
+      <h3 class="welcome">Welcome, <%=currentuser.username%>!</h3>
     <% } %>
   <h2 class="feed-header">Workout <span>Feed<span></h2>
+  <hr>
   <div class="workout-index">
     <% for(var i = 0; i < workout.length; i++){ %>
       <div class="post">

@@ -57,6 +57,10 @@ nav a:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+.welcome {
+  text-align: center;
+  color: #29b1a3;
+}
 
 .feed-header{
   text-align: center;
@@ -64,6 +68,11 @@ nav a:hover:before {
 
 span {
   color: #29b1a3;
+}
+
+hr {
+  width: 90%;
+  border-color: rgba(41, 177, 163, 0.4);
 }
 .workout-index {
   /*display: block;
