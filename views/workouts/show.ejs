@@ -17,7 +17,7 @@
           <% } else { %>
             <a href="/">Home</a>
             <a href="/workouts">Workouts Main</a>
-            <a class="button" href="/workouts/<%=workout._id%>/edit">Edit Workout</a>
+            <a href="/workouts/<%=workout._id%>/edit">Edit Workout</a>
           <% } %>
         </nav>
       </header>
@@ -25,14 +25,12 @@
     <div>
       <div class="workout-main">
         <img src="<%=workout.image%>"/><br>
-        <span><%=workout.title%><br></span>
+        <p><%=workout.title%></p><br>
         <hr>
         <%=workout.day%><br>
         <%=workout.duration%><br>
         <%=workout.description%>
-        <h6> Workout by: <a href="/users/<%=user._id%>"><%=user.username%></a></h6>
-      </div>
-      <div>
+        <h5> Workout by: <a href="/users/<%=user._id%>"><%=user.username%>&hearts;</a></h5>
         <% if(currentuser !== undefined){ %>
           <form class="button-form" action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
             <input class="button" type="submit" value="Delete Workout">

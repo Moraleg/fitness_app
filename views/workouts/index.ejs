@@ -28,13 +28,13 @@
     <% } %>
   <h2 class="feed-header">Workout <span>Feed<span></h2>
   <hr>
-  <div class="workout-index">
     <% for(var i = 0; i < workout.length; i++){ %>
-      <div class="post">
-        <a href="/workouts/<%=workout[i]._id%>"><img src="<%=workout[i].image%>"/></a><br>
-        <a href="/workouts/<%=workout[i]._id%>"><%=workout[i].title%></a>
+      <div class="workout-index">
+        <div class="post">
+          <a href="/workouts/<%=workout[i]._id%>"><img src="<%=workout[i].image%>"/></a><br>
+          <p class="title"><a href="/workouts/<%=workout[i]._id%>"><%=workout[i].title%></a></p>
         </div>
-      <% } %>
-  </div>
+      </div>
+    <% } %>
   </body>
 </html>

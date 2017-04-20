@@ -20,16 +20,16 @@
       <h2>Create a New Workout</h2>
       <form class="new-input" action="/workouts" method="POST">
         <select name="username">
+          <option>Select User:</option>
           <% for(var i = 0; i < user.length; i++){ %>
-              <option>Select User:</option>
             <option value="<%=user[i]._id%>"><%=user[i].username%></option>
           <%}%>
         </select><br>
-        <input class="new-input" type="text" name="day" placeholder="Day of The Week" /><br>
-        <input class="new-input" type="text" name="title" placeholder="Title" /><br>
-        <input class="new-input" type="text" name="duration" placeholder="Duration" /><br>
-        <input class="new-input" type="text" name="image" placeholder="Image" /><br>
-        <textarea class="new-input" name="description" placeholder="Routine"></textarea><br/>
+        <input class="new-input" type="text" name="day" placeholder="Day of The Week" />
+        <input class="new-input" type="text" name="title" placeholder="Title" />
+        <input class="new-input" type="text" name="duration" placeholder="Duration" />
+        <input class="new-input" type="text" name="image" placeholder="Image" />
+        <textarea class="new-input" name="description" placeholder="Workout Description"></textarea><br/>
         <input class="button" type="submit" value="Create Workout">
       </form>
     </div>

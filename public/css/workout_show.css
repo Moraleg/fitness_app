@@ -19,7 +19,7 @@ h1 {
   float: left;
   color: #393338;
   margin-top: 25px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .nav {
@@ -63,34 +63,60 @@ nav a:hover:before {
 }
 
 .workout-main {
-  width: 30%;
+  width: 20%;
+  height: auto;
   display: block;
-  margin: 50px auto 0 auto;
+  margin: 90px auto 100px auto;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 25px;
   background-color: rgba(41, 177, 163, 0.4);
   border-radius: 4px;
 }
 
 .workout-main img{
   width: 200px;
-  height: 300px;
+  height: 250px;
 }
 
-span {
+.workout-main p{
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+
+hr {
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+}
+
+h5 span {
   color: white;
   font-weight: bold;
   font-size: 18px;
 }
 
 
-h6 a {
+h5 a {
   color: #393338;
   text-decoration: none;
 }
 
-h6 a:hover{
+h5 a:hover{
   color: white;
+}
+
+.button {
+  margin-bottom: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  background-color: #cf8b97;
+  color: white;
+  padding: 2px 7px 2px 7px;
+  font-size: 12px;
+  margin: 0 auto;
+  display: block;
 }
 
 .clearfix::after {
