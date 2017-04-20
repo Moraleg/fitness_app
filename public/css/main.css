@@ -1,38 +1,54 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Handlee', cursive;
+  font-family: 'Quicksand', sans-serif;;
   background-color: #f4f4f4;
+  /*background-image: url('/images/banner2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;*/
+  /*height: 680px;*/
+  opacity: 0.9;
 }
 
-
-.container {
+main img {
+  max-width: 100%;
+}
+/*.container {
   background-image: url('/images/banner2.jpg');
-  background-size: 100% 680px;
+  background-size: 100%;
   background-repeat: no-repeat;
   max-width: 100%;
-  height: 680px;
-  opacity: 0.9;
-  position: relative;
-}
+  /*height: 680px;*/
+  /*opacity: 0.9;*/
+/*}*/
 
 .header{
   height: 12%;
   background-color: rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  height: 65px;
+  width: 100%;
 }
 
 h1 {
   display: inline-block;
   float: left;
   color: #393338;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 
 .nav {
+  z-index: 1;
   display: inline-block;
   float: right;
-  margin-top: 31px;
+  margin-top: 25px;
   margin-right: 30px;
 }
 
@@ -55,7 +71,7 @@ h1 {
  height: 2px;
  bottom: 0;
  left: 0;
- background-color: #f65c5b;
+ background-color: #389c90;
  visibility: hidden;
  -webkit-transform: scaleX(0);
  transform: scaleX(0);
@@ -69,6 +85,29 @@ nav a:hover:before {
   transform: scaleX(1);
 }
 
+.one {
+  position: absolute;
+  top: 100%;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.two {
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.three {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
 .sign-up{
   position: absolute;
   bottom: 34%;
@@ -80,16 +119,22 @@ nav a:hover:before {
   text-align: center;
   font-size: 18px;
   text-decoration: none;
-  background-color: #f65c5b;
+  background-color: #389c90;
   border-radius: 20px;
-  box-shadow: inset 2px 2px 2px #ceb8c3;
+  box-shadow: inset 2px 2px 2px #c2d9d1;
   padding: 7px 20px 7px 20px;
   color: white;
 
 }
 
-footer{
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 span{

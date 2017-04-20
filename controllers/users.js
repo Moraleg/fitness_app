@@ -38,12 +38,6 @@ router.get('/:id/edit', function(req, res){
   });
 });
 
-// router.get('/new/profile', function(req, res){
-//   res.render('users/show.ejs', {
-//     user: req.session.currentuser
-//   });
-// });
-
 
 //=====================PUT ROUTE======================
 router.put('/:id', function(req, res){

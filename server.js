@@ -29,7 +29,9 @@ app.use('/sessions', sessionController);
 //=====================GET ROUTE======================
 app.get('/', function(req, res){
   // res.send('main page route working');
-  res.render('index.ejs');
+  res.render('index.ejs', {
+    currentuser: req.session.currentuser
+  });
 });
 
 

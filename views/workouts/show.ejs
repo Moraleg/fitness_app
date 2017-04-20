@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <style media="screen">
-      img{
-        width: 200px;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/workout_show.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
     <div class="container clearfix">
@@ -16,22 +13,24 @@
         <nav class="nav">
           <a href="/">Home</a>
           <a href="/workouts">Workouts Main</a>
+          <a class="button" href="/workouts/<%=workout._id%>/edit">Edit Workout</a>
         </nav>
       </header>
     </div>
     <div>
-      <div>
-        <%=workout.title%><br>
+      <div class="workout-main">
+        <img src="<%=workout.image%>"/><br>
+        <span><%=workout.title%><br></span>
+        <hr>
         <%=workout.day%><br>
         <%=workout.duration%><br>
         <%=workout.description%>
-        <h6> Workouts by: <a href="/users/<%=user._id%>"><%=user.username%></a></h6>
+        <h6> Workout by: <a href="/users/<%=user._id%>"><%=user.username%></a></h6>
       </div>
       <div>
         <form class="button-form" action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
           <input class="button" type="submit" value="Delete Workout">
         </form><br>
-        <a class="button" href="/workouts/<%=workout._id%>/edit">Edit Workout</a>
       </div>
     </div>
   </body>

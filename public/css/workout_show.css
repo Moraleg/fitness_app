@@ -2,13 +2,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Quicksand', cursive;
-  background: linear-gradient(rgba(179, 214, 216,.6), rgba(82, 155, 161,.6));
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #f4f4f4;
 }
 
-.header{
+.header {
   height: 12%;
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -31,23 +28,23 @@ h1 {
 .nav a {
   text-decoration: none;
   color: #393338;
-  font-size: 22px;
+  font-size: 18px;
   margin-right: 30px;
   position: relative;
 }
 
-.nav a:hover{
+.nav a:hover {
   color: #393338;
 }
 
 .nav a:before {
-content: "";
+  content: "";
  position: absolute;
  width: 100%;
  height: 2px;
  bottom: 0;
  left: 0;
- background-color: #29b1a3;
+ background-color: #b3d6d8;
  visibility: hidden;
  -webkit-transform: scaleX(0);
  transform: scaleX(0);
@@ -61,45 +58,29 @@ nav a:hover:before {
   transform: scaleX(1);
 }
 
-.sign-up-container{
-  width: 25%;
-  text-align: center;
+.workout-main {
+  width: 30%;
   display: block;
-  margin: 150px auto;
-  padding: 20px;
-  background-color: #393338;
-  box-shadow: 0px 1px 1px #393338;
-}
-
-.sign-up-container h2{
-  color: white
-}
-
-.user-li {
-  list-style: none;
-}
-
-.user-li a{
-  text-decoration: none;
-}
-
-.button{
-  background-color: #29b1a3;
-  border: none;
-  color: white;
-  margin-top: 14px;
-  padding: 6px 14px 6px 14px;
-  border-radius: 14px;
-  outline: none;
-}
-
-.new-input{
-  border-radius: 14px;
-  padding: 8px;
-  border: none;
-  margin: 10px;
+  margin: 50px auto 0 auto;
   text-align: center;
-  outline: none;
+  padding-top: 20px;
+  background-color: rgba(41, 177, 163, 0.4);
+  border-radius: 4px;
+}
+
+.workout-main img{
+  width: 150px;
+  height: 300px;
+}
+
+span {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+hr {
+  color: white;
 }
 
 .clearfix::after {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Fitness App</title>
     <link rel="stylesheet" href="/css/user_edit.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Handlee|Josefin+Slab|Poiret+One" rel="stylesheet">
   </head>
   <body>
     <div class="container clearfix">
@@ -23,6 +23,7 @@
       <input class="new-input" type="text" name="username" value="<%=user.username%>"><br>
       <!-- <label for="password">Password</label> -->
       <input class="new-input" type="password" name="password" pattern=".{6,}" id="password"  value="<%=user.password%>"/><br>
+      <input class="new-input" type="text" name="userImg" placeholder="<%=user.userImg%>"/><br/>
       <input class="button" type="submit" value="Update User"><br>
       </div>
   </body>

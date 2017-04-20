@@ -10,7 +10,8 @@ var User = require('../models/users.js');
 router.get('/', function(req, res){
   Workouts.find({}, function(err, foundWorkouts){
     res.render('workouts/index.ejs', {
-      workout:foundWorkouts
+      workout:foundWorkouts,
+      currentuser: req.session.currentuser
     });
   });
 });

@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Handlee', cursive;
+  font-family: 'Quicksand', cursive;
   background-color: #f4f4f4;
 }
 
@@ -44,7 +44,7 @@ h1 {
  height: 2px;
  bottom: 0;
  left: 0;
- background-color: thistle;
+ background-color: #b3d6d8;
  visibility: hidden;
  -webkit-transform: scaleX(0);
  transform: scaleX(0);
@@ -58,53 +58,35 @@ nav a:hover:before {
   transform: scaleX(1);
 }
 
-.user-index {
-  display: block;
-  margin: 50px auto 0 auto;
-  text-align: center;
-}
-.users {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.users a {
-  text-decoration: none;
-}
-
-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 70%;
-}
 .workout-post {
-  width: 150px;
-  display: inline-block;
-  background-color: thistle;
-  padding: 10px;
-  box-shadow: 0px 0px 10px #393338;
+  width: 400px;
+  height: 500px;
+  margin: 100px auto;
+  display: block;
+  padding-top: 20px;
+  background-color: #b3d6d8;
+
 }
 
-.workout-post p{
-  margin-top: 5px;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.workout-post a{
-  color: #393338;
-}
-
-.workout-post a:hover{
+.workout-post h2 {
+  text-align: center;
+  margin-top: 0;
   color: white;
 }
 
+.new-input {
+  display: block;
+  margin: 8px auto;
+  border: none;
+  padding: 8px 60px;
+  border-radius: 10px;
+  text-align: center;
+}
 .buttons {
   padding-top: 15px;
   display: block;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
 }
 .button {
   margin-bottom: 5px;
@@ -115,7 +97,8 @@ img {
   color: white;
   padding: 2px 7px 2px 7px;
   font-size: 12px;
-
+  margin: 0 auto;
+  display: block;
 }
 
 .clearfix::after {
