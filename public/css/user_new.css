@@ -21,6 +21,10 @@ h1 {
   margin-left: 20px;
 }
 
+.logo {
+  color: #389c90;
+}
+
 .nav {
   display: inline-block;
   float: right;

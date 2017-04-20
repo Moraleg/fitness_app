@@ -10,6 +10,10 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.logo {
+  color: #389c90;
+}
+
 h1 {
   display: inline-block;
   float: left;
@@ -44,7 +48,7 @@ h1 {
  height: 2px;
  bottom: 0;
  left: 0;
- background-color: #529ba1;
+ background-color: #b3d6d8;
  visibility: hidden;
  -webkit-transform: scaleX(0);
  transform: scaleX(0);
@@ -74,14 +78,14 @@ nav a:hover:before {
 }
 
 img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 70%;
 }
 .workout-post {
   width: 150px;
   display: inline-block;
-  background-color: #529ba1;
+  background-color: rgba(41, 177, 163, 0.4);;
   color: white;
   padding: 10px;
   box-shadow: 0px 0px 10px thistle;

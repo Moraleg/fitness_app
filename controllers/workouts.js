@@ -29,7 +29,7 @@ router.get('/new', function(req, res){
 router.get('/:id', function(req, res){
   Workouts.findById(req.params.id, function(err, foundWorkouts){
     User.findOne({'workouts._id': req.params.id}, function(err, foundUsers){
-      console.log({'workouts._id': req.params.id});
+      // console.log({'workouts._id': req.params.id});
       res.render('workouts/show.ejs', {
         workout: foundWorkouts,
         user: foundUsers,

@@ -10,6 +10,10 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.logo {
+  color: #389c90;
+}
+
 h1 {
   display: inline-block;
   float: left;
@@ -69,7 +73,7 @@ nav a:hover:before {
 }
 
 .workout-main img{
-  width: 150px;
+  width: 200px;
   height: 300px;
 }
 
@@ -79,7 +83,13 @@ span {
   font-size: 18px;
 }
 
-hr {
+
+h6 a {
+  color: #393338;
+  text-decoration: none;
+}
+
+h6 a:hover{
   color: white;
 }
 

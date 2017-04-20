@@ -15,6 +15,10 @@ body {
   opacity: 0.9;
 }
 
+.logo {
+  color: #389c90;
+}
+
 main img {
   max-width: 100%;
 }

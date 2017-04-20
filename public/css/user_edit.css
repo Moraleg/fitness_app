@@ -2,7 +2,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Quicksand', cursive;
-  /*background-color: #ceb8c3;*/
   background-color: rgba(41, 177, 163, 0.2);
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,6 +19,10 @@ h1 {
   color: #393338;
   margin-top: 25px;
   margin-left: 20px;
+}
+
+.logo {
+  color: #389c90;
 }
 
 .nav {
