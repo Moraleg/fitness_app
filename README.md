@@ -24,3 +24,5 @@ Future Improvements:
 - modify so that user can only edit and delete their specific posts and profiles and not every user's posts and profiles.
 - modify so that posts that are edited are updated on the users profile page as well.
 - password length alert
+- UX/UI design can be improved
+- app crashes with incorrect username or password input.
