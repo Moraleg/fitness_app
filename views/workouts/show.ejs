@@ -30,7 +30,7 @@
         <%=workout.day%><br>
         <%=workout.duration%><br>
         <%=workout.description%>
-        <h5> Workout by: <a href="/users/<%=user._id%>"><%=user.username%>&hearts;</a></h5>
+        <h5> Workout by: <a href="/users/<%=user._id%>"><%=user.username%> &hearts;</a></h5>
         <% if(currentuser !== undefined){ %>
           <form class="button-form" action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
             <input class="button" type="submit" value="Delete Workout">

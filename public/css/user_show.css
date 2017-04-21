@@ -82,6 +82,20 @@ nav a:hover:before {
   height: 85px;
   border-radius: 70%;
 }
+.profile-header {
+  margin: 10px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+hr {
+  width: 90%;
+  border-color: rgba(41, 177, 163, 0.4);
+  margin-top: 12px;
+}
+h5 {
+  color: #393338;
+}
 
 .image-post {
   width: 200px;

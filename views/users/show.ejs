@@ -22,19 +22,24 @@
       </header>
     </div>
     <div class="user-index">
-      <div class="profile-img">
-        <img  class="profile-pic" src="<%=user.userImg%>"/><br>
+      <div class="profile-header">
+        <div class="profile-img">
+          <img  class="profile-pic" src="<%=user.userImg%>"/><br>
+          <hr>
+        </div>
       </div>
-  			<h6>Workouts by <%=user.username%>:</h6>
-          <div class="users">
-  					<% for(var i = 0; i < user.workouts.length; i++){ %>
-  						<div class="workout-post">
-                <p><img class="image-post" src="<%=user.workouts[i].image%>"></p>
-  							<a href="/workouts/<%=user.workouts[i]._id%>"><%=user.workouts[i].title%></a>
-  						</div>
-  						<%}%>
-  				</div>
-  		</div>
+        <div class="mid">
+    			<h5>All Workouts by <%=user.username%> &hearts;:</h5>
+            <div class="users">
+    					<% for(var i = 0; i < user.workouts.length; i++){ %>
+    						<div class="workout-post">
+                  <p><img class="image-post" src="<%=user.workouts[i].image%>"></p>
+    							<a href="/workouts/<%=user.workouts[i]._id%>"><%=user.workouts[i].title%></a>
+    						</div>
+    						<%}%>
+    				</div>
+    		</div>
+      </div>
       <div class="buttons">
         <form action="/sessions?_method=DELETE" method="POST">
           <input class="button" type="submit" value="Logout">

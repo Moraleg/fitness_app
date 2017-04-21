@@ -16,14 +16,16 @@
         </nav>
       </header>
     </div>
-    <div>
+    <div class="workout-post">
+      <h2>Edit Workout</h2>
       <form class="new-input" action="/workouts/<%=workout.id%>?_method=PUT" method="POST">
-        <input class="new-input" type="text" name="title" placeholder="Title" /><br>
-        <input class="new-input" type="text" name="day" placeholder="Day of the Week" /><br>
-        <input class="new-input" type="text" name="duration" placeholder="Duration" /><br>
-        <textarea class="new-input" name="description" placeholder="Workout Description"></textarea><br/>
+        <input class="new-input" type="text" name="title" placeholder="Title" value="<%=workout.title%>" /><br>
+        <input class="new-input" type="text" name="day" placeholder="Day of the Week" value="<%=workout.day%>"/><br>
+        <input class="new-input" type="text" name="duration" placeholder="Duration" value="<%=workout.duration%>"/></><br>
+        <textarea class="new-input" name="description" placeholder="Workout Description" value="<%=workout.description%>"/></textarea><br/>
         <input class="button" type="submit" value="Update Workout">
       </form>
     </div>
+
   </body>
 </html>
