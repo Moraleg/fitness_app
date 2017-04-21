@@ -107,9 +107,10 @@ h5 {
   display: inline-block;
   background-color: rgba(41, 177, 163, 0.4);;
   color: white;
-  padding: 10px;
+  padding: 20px;
   margin-right: 10px;
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 .workout-post p{
